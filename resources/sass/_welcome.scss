@@ -1,0 +1,46 @@
+#particles-background {
+    background-color: #18b6b6;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        background-color: #ffffffeb;
+        box-shadow: 0 0 14px -5px rgba(0,0,0,0.46);
+        padding: 35px;
+        margin: 0 15px;
+        border-radius: 15px;
+        h1 {
+            color: #595959;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .call-to-action {
+            padding: 7px 25px;
+            background-color: #49aba3;
+            color: white;
+            border: 0;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+    }
+}

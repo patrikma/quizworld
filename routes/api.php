@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+*/
+// Returns all available quizzes
+Route::get('all-quizzes', 'QuizController@index');
+
+// Returns questions for the quiz with the given ID
+Route::get('{quizId}/all-questions', 'QuestionController@index');

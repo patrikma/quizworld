@@ -5,17 +5,19 @@ namespace App\Http\Controllers;
 use App\Quiz;
 use App\Http\Resources\Quiz as QuizResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class QuizController extends Controller
 {
     /**
-     * Get listing of quizzes as a resource
+     * Get listing of quizzes with a number of questions belonging to it as a resource
      *
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        $quizzes = Quiz::all();
+        $quizzes = Quiz::join('questions', 'quizzes.id', '=', 'questions.quiz_id')->groupBy('quizzes.id', 'name')
+            ->select('quizzes.id', 'name', DB::raw('count(*) as total'))->get()->sortByDesc('id');
         return QuizResource::collection($quizzes);
     }
 
@@ -47,14 +49,17 @@ class QuizController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Get info about the current quiz
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return QuizResource
      */
     public function show($id)
     {
-        //
+        $quiz = Quiz::join('questions', 'quizzes.id', '=', 'questions.quiz_id')->where('quizzes.id', $id)->
+        groupBy('name')->select('name', DB::raw('count(*) as total'))->firstOrFail();
+
+        return new QuizResource($quiz);
     }
 
     /**

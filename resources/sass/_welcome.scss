@@ -1,5 +1,5 @@
 #particles-background {
-    background-color: #18b6b6;
+    background-color: $main-background;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -32,6 +32,9 @@
         }
         p {
             font-size: 1.2rem;
+        }
+        img {
+            max-width: 50px;
         }
         .call-to-action {
             padding: 7px 25px;

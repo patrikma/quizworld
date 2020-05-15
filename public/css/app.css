@@ -10877,6 +10877,11 @@ a.text-dark:focus {
   }
 }
 
+html,
+body {
+  height: 100%;
+}
+
 #particles-background {
   background-color: #18b6b6;
   height: 100%;
@@ -10916,6 +10921,10 @@ a.text-dark:focus {
 
 .welcome .info-box p {
   font-size: 1.2rem;
+}
+
+.welcome .info-box img {
+  max-width: 50px;
 }
 
 .welcome .info-box .call-to-action {

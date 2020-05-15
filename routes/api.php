@@ -23,5 +23,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Returns all available quizzes
 Route::get('all-quizzes', 'QuizController@index');
 
+// Returns info about the selected quiz
+Route::get('quiz-info/{quizId}', 'QuizController@show');
+
 // Returns questions for the quiz with the given ID
-Route::get('{quizId}/all-questions', 'QuestionController@index');
+Route::get('all-questions/{quizId}', 'QuestionController@index');

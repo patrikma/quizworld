@@ -15,6 +15,7 @@
             <div class="info-box">
                 <h1>Kvízy a testy pro každého!</h1>
                 <p>Otestujte si svoje znalosti na některých z našich kvízů. Ihned a bez registrace.</p>
+                <img src="{{url('/img/quiz-board.svg')}}" alt="">
                 <a href="{{url('/play')}}">
                     <button class="call-to-action">Zobrazit nabídku kvízů</button>
                 </a>

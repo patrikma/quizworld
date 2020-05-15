@@ -33,7 +33,10 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import App from './components/App';
-import List from './components/List';
+import List from './components/listing/List';
+import Quiz from "./components/quiz-page/Quiz";
+
+import store from './vuex-store';
 
 const router = new VueRouter({
     mode: 'history',
@@ -42,6 +45,11 @@ const router = new VueRouter({
             path: '/play',
             name: 'list',
             component: List
+        },
+        {
+            path: '/play/quiz/:id',
+            name: 'quizPage',
+            component: Quiz
         }
     ]
 });
@@ -51,5 +59,6 @@ const app = new Vue({
     components: {
         App
     },
-    router
+    router,
+    store
 });

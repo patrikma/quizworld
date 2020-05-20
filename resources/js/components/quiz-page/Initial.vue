@@ -1,13 +1,13 @@
 <template>
     <div v-if="info" class="info">
         <Header :title="info.name"></Header>
-        <p class="count">Kvíz obsahuje celkem {{info.total}} otázek. Bez časového omezení.</p>
+        <p class="count">Kvíz obsahuje celkem <strong>{{info.total}}</strong> otázek. Bez časového omezení.</p>
         <button v-on:click="startQuiz" class="play-button">Spustit</button>
     </div>
 </template>
 
 <script>
-    import Header from "../Header";
+    import Header from "../elements/Header";
 
     import axios from "axios";
     import store from "../../vuex-store";

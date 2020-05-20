@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import Header from "../Header";
+    import Header from "../elements/Header";
 
     import axios from 'axios';
     import store from "../../vuex-store";

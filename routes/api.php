@@ -28,3 +28,6 @@ Route::get('quiz-info/{quizId}', 'QuizController@show');
 
 // Returns questions for the quiz with the given ID
 Route::get('all-questions/{quizId}', 'QuestionController@index');
+
+// Returns all options for the question with the given ID (ONLY FOR TYPE 0!)
+Route::get('all-options/{quizId}', 'OptionController@index');

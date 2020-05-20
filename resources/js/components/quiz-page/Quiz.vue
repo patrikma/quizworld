@@ -1,12 +1,14 @@
 <template>
     <div class="quiz-area">
         <Initial v-if="!isRunning"></Initial>
-        <Questions v-if="isRunning"></Questions>
+        <Questions v-if="isRunning && !hasFinished"></Questions>
+        <Score v-if="hasFinished"></Score>
     </div>
 </template>
 
 <script>
     import Initial from "./Initial";
+    import Score from "./Score";
 
     import store from "../../vuex-store";
     import Questions from "./Questions";
@@ -27,6 +29,12 @@
              */
             isRunning() {
                 return store.getters.runningState;
+            },
+            /**
+             * Checks if the quiz has finished
+             */
+            hasFinished() {
+                return store.getters.hasFinished;
             }
         },
         methods: {
@@ -42,7 +50,9 @@
             // Initial screen with a start button
             Initial,
             // Questions
-            Questions
+            Questions,
+            //Final screen with results
+            Score
         }
     }
 </script>

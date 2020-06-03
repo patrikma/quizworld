@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Question;
 use App\Quiz;
 use App\Http\Resources\Quiz as QuizResource;
 use Illuminate\Http\Request;
@@ -62,27 +63,17 @@ class QuizController extends Controller
         return new QuizResource($quiz);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+    public function correctOptionsAnswers($quizId) {
+        $correctOptions = Question::where('quiz_id', '=', $quizId)
+            ->join('options', 'options.question_id', '=', 'questions.id')
+            ->join('correct_options', 'correct_options.option_id', '=', 'options.id')
+            ->select('questions.id AS question_id', 'questions.text AS text', 'type', 'options.id AS opt_id',
+                'options.text AS answer');
+        $correctAnswers = Question::where('quiz_id', '=', $quizId)
+            ->join('answers', 'answers.question_id', '=', 'questions.id')
+            ->select('questions.id AS question_id', 'questions.text AS text', 'type', 'answers.id AS opt_id',
+                'answers.answer AS answer')->union($correctOptions)->get()->sortBy('question_id');
+        return QuizResource::collection($correctAnswers);
     }
 
     /**

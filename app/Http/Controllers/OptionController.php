@@ -13,4 +13,5 @@ class OptionController extends Controller
         $options = Question::findOrFail($questionId)->options()->get();
         return OptionResource::collection($options);
     }
+
 }

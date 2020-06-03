@@ -2,7 +2,7 @@
     <div class="options-wrapper">
         <ol v-if="options" class="options-list">
             <li v-for="{id, text} in options" :key="id"
-                @click="selectOption(id)" v-bind:class="{selected: (selectedOptionId === id)}">
+                @click="selectOption(text)" v-bind:class="{selected: (selectedOption === text)}">
                 {{text}}
             </li>
         </ol>
@@ -25,7 +25,7 @@
                 options: null,
                 id: this.questionId,
 
-                selectedOptionId: null
+                selectedOption: ""
             }
         },
         created() {
@@ -33,7 +33,7 @@
         },
         computed: {
             isOptionSelected() {
-                return this.selectedOptionId != null;
+                return this.selectedOption !== "";
             },
         },
         methods: {
@@ -47,21 +47,21 @@
                     })
             },
             /**
-             * Marks the selected option and saves its ID
-             * @param id
+             * Marks the selected option and saves it
+             * @param text - option
              */
-            selectOption(id) {
-                this.selectedOptionId = id;
+            selectOption(text) {
+                this.selectedOption = text;
             },
             /**
              * Saves selected option ID to store and proceeds to the next question, if no other questions
              * are available, finishes the quiz to allow displaying the score.
              */
             saveAndContinue() {
-                if (!this.selectedOptionId) {
+                if (!this.selectedOption) {
                     return;
                 }
-                store.commit('saveOption', {questionId: this.id, optionId: this.selectedOptionId});
+                store.commit('saveAnswer', {questionId: this.id, answer: this.selectedOption});
                 if (store.getters.isLastQuestion) {
                     store.commit('finish');
                     return;

@@ -34,7 +34,7 @@
              * Loads all questions for this quiz and saves them to the store
              */
             fetchQuestions() {
-                axios.get('/api/all-questions/' + this.$route.params.id)
+                axios.get('/api/all-questions/' + store.getters.quizId)
                     .then(response => {
                         store.commit('setQuestions', response.data);
                     })

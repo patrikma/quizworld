@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="76f70abc-4787-4abd-ab3a-b9e907ab11e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/listing/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/listing/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Initial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Initial.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Question.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Questions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Questions.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Quiz.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Quiz.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Score.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Score.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/answer-types/Options.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/answer-types/Options.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/vuex-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vuex-store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -145,7 +143,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/video-wallpapers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -210,7 +208,10 @@
       <workItem from="1589714898795" duration="7396000" />
       <workItem from="1589809283591" duration="12430000" />
       <workItem from="1589894525284" duration="8842000" />
-      <workItem from="1589984317562" duration="2520000" />
+      <workItem from="1589984317562" duration="11909000" />
+      <workItem from="1590505857401" duration="43000" />
+      <workItem from="1591101604691" duration="4121000" />
+      <workItem from="1591184041631" duration="3442000" />
     </task>
     <task id="LOCAL-00001" summary="Quiz listing finished">
       <created>1589583524153</created>
@@ -238,18 +239,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="285" y="298" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1589583523329" />
-    <state x="434" y="458" key="FileChooserDialogImpl" timestamp="1589480794988">
+    <state x="434" y="458" key="FileChooserDialogImpl" timestamp="1590505898215">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="434" y="458" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1589480794988" />
+    <state x="434" y="458" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1590505898215" />
     <state x="481" y="631" key="NewPhpFileDialog" timestamp="1589632973953">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="481" y="631" key="NewPhpFileDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1589632973953" />
-    <state x="362" y="527" key="com.intellij.ide.util.TipDialog" timestamp="1589984843742">
+    <state x="362" y="527" key="com.intellij.ide.util.TipDialog" timestamp="1591192317498">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="362" y="527" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1589984843742" />
+    <state x="362" y="527" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1591192317498" />
     <state x="458" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589583575356">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

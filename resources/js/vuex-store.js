@@ -31,6 +31,14 @@ const store = new Vuex.Store({
             return state.running;
         },
         /**
+         * Gets id of the current quiz
+         * @param state
+         * @returns {number} - id of the started quiz
+         */
+        quizId(state) {
+            return state.quizId;
+        },
+        /**
          * ID and name of the current question (removed from the questions array)
          * @param state
          * @returns {object} question details
@@ -61,6 +69,14 @@ const store = new Vuex.Store({
          */
         total(state) {
             return state.total;
+        },
+        /**
+         * Returns answers
+         * @param state
+         * @returns {object}
+         */
+        answers(state) {
+            return state.answers;
         }
     },
     mutations: {
@@ -96,16 +112,7 @@ const store = new Vuex.Store({
             state.questions = questions;
         },
         /**
-         * Saves option as an answer
-         * @param state
-         * @param questionId {number}
-         * @param optionId {number}
-         */
-        saveOption(state, {questionId, optionId}) {
-            Vue.set(state.answers, questionId, optionId);
-        },
-        /**
-         * Saves a string entered by user as an answer
+         * Saves either an option text or a string entered by user as an answer
          * @param state
          * @param questionId {number}
          * @param answer {string}

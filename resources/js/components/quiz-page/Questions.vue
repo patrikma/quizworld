@@ -22,9 +22,15 @@
             this.fetchQuestions();
         },
         computed: {
+            /**
+             * Gets current question details
+             */
             currentQuestion() {
                 return store.getters.currentQuestion;
             },
+            /**
+             * Gets total number of questions for this quiz
+             */
             getTotalNumberOfQuestions() {
                 return store.getters.total;
             }

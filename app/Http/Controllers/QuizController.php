@@ -63,6 +63,11 @@ class QuizController extends Controller
         return new QuizResource($quiz);
     }
 
+    /**
+     * Array of correct answers and options for the given quiz
+     * @param $quizId - quiz ID
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
     public function correctOptionsAnswers($quizId) {
         $correctOptions = Question::where('quiz_id', '=', $quizId)
             ->join('options', 'options.question_id', '=', 'questions.id')
@@ -74,6 +79,15 @@ class QuizController extends Controller
             ->select('questions.id AS question_id', 'questions.text AS text', 'type', 'answers.id AS opt_id',
                 'answers.answer AS answer')->union($correctOptions)->get()->sortBy('question_id');
         return QuizResource::collection($correctAnswers);
+    }
+
+    /**
+     * Gets a random quiz
+     * @return QuizResource
+     */
+    public function randomQuiz() {
+        $randomQuiz = Quiz::all()->random(1)->first();
+        return new QuizResource($randomQuiz);
     }
 
     /**

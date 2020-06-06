@@ -2,7 +2,7 @@
     <div v-if="info" class="info">
         <Header :title="info.name"></Header>
         <p class="count">Kvíz obsahuje celkem <strong>{{info.total}}</strong> otázek. Bez časového omezení.</p>
-        <button v-on:click="startQuiz" class="play-button">Spustit</button>
+        <button @click="startQuiz" class="play-button">Spustit</button>
     </div>
 </template>
 

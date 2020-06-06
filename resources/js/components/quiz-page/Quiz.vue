@@ -1,5 +1,6 @@
 <template>
     <div class="quiz-area">
+        <!-- Display specific content depending on the state in the Vuex store -->
         <Initial v-if="!isRunning"></Initial>
         <Questions v-if="isRunning && !hasFinished"></Questions>
         <Score v-if="hasFinished"></Score>

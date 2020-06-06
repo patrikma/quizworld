@@ -2,16 +2,18 @@
     <div class="score-wrapper">
         <Header title="Vaše výsledky"></Header>
 
+        <!-- Results table -->
         <ResultsHeader></ResultsHeader>
-
         <div v-if="comparedResults" class="results">
             <div v-for="result in comparedResults" class="result-wrapper">
                 <Result :result="result"></Result>
             </div>
         </div>
+
+        <!-- Statistics -->
         <div class="rating">
             <p>Úspěšnost:</p>
-            <p>{{this.score}} %</p>
+            <CircleChart :percentage="this.score"></CircleChart>
         </div>
     </div>
 </template>
@@ -20,6 +22,7 @@
     import Header from "../elements/Header";
     import Result from "./Result";
     import ResultsHeader from "./ResultsHeader";
+    import CircleChart from "./CircleChart";
 
     import axios from "axios";
     import store from "../../vuex-store";
@@ -37,12 +40,20 @@
             this.fetchCorrectAnswers().then(this.compareAnswers);
         },
         methods: {
+            /**
+             * Gets all correct answers for each question
+             * @return {Promise<AxiosResponse<T>>} - correct answers
+             */
             fetchCorrectAnswers() {
                 return axios.get('/api/correct-results/' + store.getters.quizId)
                     .then(response => {
                         this.correctResults = response.data;
                     })
             },
+            /**
+             * Compares user answers with the correct ones, saves them to comparedResults and calculates the
+             * final score
+             */
             compareAnswers() {
                 const userResults = store.getters.answers;
                 let compared = [];
@@ -64,9 +75,14 @@
             }
         },
         components: {
+            // Header
             Header,
+            // Header row for results
             ResultsHeader,
-            Result
+            // Individual result row
+            Result,
+            // Animated chart with success rate
+            CircleChart
         }
     }
 </script>
@@ -91,5 +107,8 @@
     }
     .result-wrapper {
         width: 100%;
+    }
+    .rating {
+        margin-top: 30px;
     }
 </style>

@@ -14,7 +14,14 @@
 
     export default {
         name: "Answer",
-        props: ['questionId'],
+        props: {
+            /**
+             * ID of the question
+             */
+            questionId: {
+                type: Number
+            }
+        },
         data() {
             return {
                 options: null,
@@ -41,6 +48,7 @@
             }
         },
         components: {
+            // Button to confirm the answer and proceed to the next question/finish
             ContinueButton
         }
     }

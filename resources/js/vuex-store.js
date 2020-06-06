@@ -23,7 +23,7 @@ const store = new Vuex.Store({
      },
     getters: {
         /**
-         * State of the quiz
+         * Current state of the quiz
          * @param state
          * @returns {boolean} if the quiz is running
          */
@@ -49,7 +49,7 @@ const store = new Vuex.Store({
         /**
          * Checks if no other questions are available
          * @param state
-         * @returns {boolean}
+         * @returns {boolean} - if it is the last question
          */
         isLastQuestion(state) {
             return state.questions.length === 0;
@@ -71,9 +71,10 @@ const store = new Vuex.Store({
             return state.total;
         },
         /**
-         * Returns answers
+         * Returns all selected/typed answers
          * @param state
-         * @returns {object}
+         * @returns {object} - all user answers (key = question ID, value = answer - either option as a string
+         * or string typed by user (depends on the question type))
          */
         answers(state) {
             return state.answers;
@@ -96,7 +97,7 @@ const store = new Vuex.Store({
               state.running = true;
         },
         /**
-         * Loads all the questions to the state
+         * Loads all the questions to the state and sets the first one as the current question
          * @param state
          * @param questions {array} - objects from API
          */
@@ -149,6 +150,7 @@ const store = new Vuex.Store({
         reset(state) {
             state.quizId = null;
             state.running = false;
+            state.finished = false;
             state.questions = [];
             state.total = null;
             state.currentQuestion = {id: null, type: null, text: "", counter: null};

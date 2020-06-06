@@ -15,7 +15,14 @@
 <script>
     export default {
         name: "Result",
-        props: ['result']
+        props: {
+            /**
+             * Result details
+             */
+            result: {
+                type: Object
+            }
+        }
     }
 </script>
 
@@ -38,6 +45,7 @@
     }
     .user-answer {
         flex-basis: 25%;
+        font-weight: 700;
     }
     .user-answer.correct {
         color: #2a9055;

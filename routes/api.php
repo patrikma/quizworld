@@ -32,4 +32,8 @@ Route::get('all-questions/{quizId}', 'QuestionController@index');
 // Returns all options for the question with the given ID (ONLY FOR TYPE 0!)
 Route::get('all-options/{quizId}', 'OptionController@index');
 
+// Returns a collection of questions belonging to the quiz with the given ID  and correct results for all of them
 Route::get('correct-results/{quizId}', 'QuizController@correctOptionsAnswers');
+
+// Returns a random quiz
+Route::get('random-quiz', 'QuizController@randomQuiz');

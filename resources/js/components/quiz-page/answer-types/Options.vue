@@ -19,7 +19,14 @@
 
     export default {
         name: "Options",
-        props: ['questionId'],
+        props: {
+            /**
+             * ID of the question
+             */
+            questionId: {
+                type: Number
+            }
+        },
         data() {
             return {
                 options: null,
@@ -32,6 +39,10 @@
             this.fetchOptions();
         },
         computed: {
+            /**
+             * Gets Checks if any question is selected
+             * @return {boolean} - if any question is selected
+             */
             isOptionSelected() {
                 return this.selectedOption !== "";
             },
@@ -70,6 +81,7 @@
             }
         },
         components: {
+            // Button to confirm the answer and proceed to the next question/finish
             ContinueButton
         }
     }

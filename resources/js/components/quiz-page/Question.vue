@@ -2,6 +2,7 @@
     <div class="question">
         <span class="counter">Otázka č. {{details.counter}} z celkem {{total}}</span>
         <h1 class="question-text">{{details.text}}</h1>
+        <!-- Display suitable answer type -->
         <Options v-if="details.type === 0" :questionId="details.id" :key="details.id"></Options>
         <Answer v-if="details.type === 1" :questionId="details.id" :key="details.id"></Answer>
     </div>
@@ -11,12 +12,22 @@
     import Options from "./answer-types/Options";
     import Answer from "./answer-types/Answer";
 
-    import axios from "axios";
-    import store from "../../vuex-store";
-
     export default {
         name: "Question",
-        props: ['details', 'total'],
+        props: {
+            /**
+             * Info about the quiz
+             */
+            details: {
+                type: Object
+            },
+            /**
+             * Total number of questions
+             */
+            total: {
+                type: Number
+            }
+        },
         components: {
             // First type of a question - a couple of options to choose from
             Options,

@@ -8,7 +8,7 @@
                 </div>
                 <div class="logo">Quiz World</div>
                 <div class="right menu-area">
-                    <a href="">Náhodný kvíz</a>
+                    <a href="" @click="goToRandomQuiz($event)">Náhodný kvíz</a>
                 </div>
             </nav>
         </header>
@@ -21,8 +21,23 @@
 </template>
 
 <script>
+    import axios from "axios";
+
     export default {
-        name: "App"
+        name: "App",
+        methods: {
+            /**
+             * Goes to a randomly selected quiz, doesn´t use Vue router
+             * @param ev - event
+             */
+            goToRandomQuiz(ev) {
+                ev.preventDefault();
+                axios.get('/api/random-quiz')
+                    .then(response => {
+                        window.location.replace('/play/quiz/' + response.data.id);
+                    });
+            }
+        }
     }
 </script>
 

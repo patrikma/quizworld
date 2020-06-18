@@ -21,6 +21,7 @@
 <style scoped>
     .results-header {
         width: 100%;
+        min-width: 480px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

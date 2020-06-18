@@ -2,6 +2,7 @@
     <div class="question">
         <span class="counter">Otázka č. {{details.counter}} z celkem {{total}}</span>
         <h1 class="question-text">{{details.text}}</h1>
+        <QuestionImage :questionId="details.id"></QuestionImage>
         <!-- Display suitable answer type -->
         <Options v-if="details.type === 0" :questionId="details.id" :key="details.id"></Options>
         <Answer v-if="details.type === 1" :questionId="details.id" :key="details.id"></Answer>
@@ -11,6 +12,7 @@
 <script>
     import Options from "./answer-types/Options";
     import Answer from "./answer-types/Answer";
+    import QuestionImage from "./QuestionImage";
 
     export default {
         name: "Question",
@@ -29,6 +31,8 @@
             }
         },
         components: {
+            // Image for this question (if is available)
+            QuestionImage,
             // First type of a question - a couple of options to choose from
             Options,
             // Second type of a question - a text answer
@@ -51,5 +55,6 @@
     .question-text {
         font-size: 1.6rem;
         margin-bottom: 20px;
+        text-align: center;
     }
 </style>

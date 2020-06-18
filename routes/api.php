@@ -7,33 +7,45 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 | API Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
 */
 
-/*
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-*/
-// Returns all available quizzes
+/**
+ * Returns all available quizzes
+ * [{id, name, total (total number of questions)}]
+ */
 Route::get('all-quizzes', 'QuizController@index');
 
-// Returns info about the selected quiz
+/**
+ * Returns info about the selected quiz
+ * {name, total (total number of questions)}
+ */
 Route::get('quiz-info/{quizId}', 'QuizController@show');
 
-// Returns questions for the quiz with the given ID
+/**
+ * Returns questions for the quiz with the given ID
+ * [{id, text, type, quiz_id, created_at, updated_at}]
+ */
 Route::get('all-questions/{quizId}', 'QuestionController@index');
 
-// Returns all options for the question with the given ID (ONLY FOR TYPE 0!)
-Route::get('all-options/{quizId}', 'OptionController@index');
+/**
+ * Returns all options for the question with the given ID (ONLY FOR TYPE 0!)
+ * [{id, text, question_id}]
+ */
+Route::get('all-options/{questionId}', 'OptionController@index');
 
-// Returns a collection of questions belonging to the quiz with the given ID  and correct results for all of them
+/**
+ * Returns url of the image (if is available) for the given question ID.
+ */
+Route::get('question-image/{questionId}', 'QuestionImageController@get');
+
+/**
+ * Returns a collection of questions belonging to the quiz with the given ID  and correct results for all of them
+ * [{question_id, text, type, opt_id, answer}]
+ */
 Route::get('correct-results/{quizId}', 'QuizController@correctOptionsAnswers');
 
-// Returns a random quiz
+/**
+ * Returns a random quiz
+ * {id, name, created_at, updated_at}
+ */
 Route::get('random-quiz', 'QuizController@randomQuiz');

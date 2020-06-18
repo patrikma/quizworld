@@ -1,5 +1,9 @@
 #particles-background {
-    background-color: $main-background;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a5e5ef+0,2ed1ce+100 */
+    background: #a5e5ef; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #a5e5ef 0%, #2ed1ce 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #a5e5ef 0%,#2ed1ce 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #a5e5ef 0%,#2ed1ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     height: 100%;
     width: 100%;
     position: absolute;
@@ -20,11 +24,10 @@
         text-align: center;
         position: relative;
         z-index: 2;
-        background-color: #ffffffeb;
+        background-color: rgba(255, 255, 255, 0.92);
         box-shadow: 0 0 14px -5px rgba(0,0,0,0.46);
         padding: 35px;
         margin: 0 15px;
-        border-radius: 15px;
         h1 {
             color: #595959;
             font-weight: 700;
@@ -34,7 +37,7 @@
             font-size: 1.2rem;
         }
         img {
-            max-width: 50px;
+            max-width: 120px;
         }
         .call-to-action {
             padding: 7px 25px;
@@ -44,6 +47,13 @@
             border-radius: 20px;
             font-size: 1.2rem;
             margin-top: 15px;
+            transition: background-color .5s;
+            &:hover {
+                background-color: lighten(#49aba3, 3);
+            }
+        }
+        *:focus {
+            outline: none;
         }
     }
 }

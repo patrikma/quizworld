@@ -17,14 +17,14 @@
                 <p>Otestujte si svoje znalosti na některých z našich kvízů. Ihned a bez registrace.</p>
                 <img src="{{url('/img/quiz-board.svg')}}" alt="">
                 <a href="{{url('/play')}}">
-                    <button class="call-to-action">Zobrazit nabídku kvízů</button>
+                    <button class="call-to-action">Zobrazit kvízy</button>
                 </a>
             </div>
         </div>
         <!-- JS -->
         <script src="{{ asset('js/particles.js') }}"></script>
         <script>
-            particlesJS.load('particles-background', './js/particles.json', function() {});
+            //particlesJS.load('particles-background', './js/particles.json', function() {});
         </script>
     </body>
 </html>

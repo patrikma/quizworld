@@ -3,10 +3,12 @@
         <Header title="Vaše výsledky"></Header>
 
         <!-- Results table -->
-        <ResultsHeader></ResultsHeader>
-        <div v-if="comparedResults" class="results">
-            <div v-for="result in comparedResults" class="result-wrapper">
-                <Result :result="result"></Result>
+        <div v-if="comparedResults" class="results-wrapper">
+            <ResultsHeader></ResultsHeader>
+            <div class="results">
+                <div v-for="result in comparedResults" class="result-wrapper">
+                    <Result :result="result"></Result>
+                </div>
             </div>
         </div>
 
@@ -98,8 +100,13 @@
     .score-head {
         text-align: left;
     }
+    .results-wrapper {
+        width: 100%;
+        overflow: auto;
+    }
     .results {
         width: 100%;
+        min-width: 480px;
         display: flex;
         flex-direction: column;
         align-items: center;

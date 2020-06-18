@@ -10883,7 +10883,13 @@ body {
 }
 
 #particles-background {
-  background-color: #18b6b6;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a5e5ef+0,2ed1ce+100 */
+  background: #a5e5ef;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #a5e5ef 0%, #2ed1ce 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   height: 100%;
   width: 100%;
   position: absolute;
@@ -10906,11 +10912,10 @@ body {
   text-align: center;
   position: relative;
   z-index: 2;
-  background-color: #ffffffeb;
+  background-color: rgba(255, 255, 255, 0.92);
   box-shadow: 0 0 14px -5px rgba(0, 0, 0, 0.46);
   padding: 35px;
   margin: 0 15px;
-  border-radius: 15px;
 }
 
 .welcome .info-box h1 {
@@ -10924,7 +10929,7 @@ body {
 }
 
 .welcome .info-box img {
-  max-width: 50px;
+  max-width: 120px;
 }
 
 .welcome .info-box .call-to-action {
@@ -10935,5 +10940,14 @@ body {
   border-radius: 20px;
   font-size: 1.2rem;
   margin-top: 15px;
+  transition: background-color 0.5s;
+}
+
+.welcome .info-box .call-to-action:hover {
+  background-color: #4fb4ac;
+}
+
+.welcome .info-box *:focus {
+  outline: none;
 }
 

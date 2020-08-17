@@ -7,7 +7,7 @@
         name: "Header",
         props: {
             /**
-             * Title
+             * Title to display
              */
             title: String
         }

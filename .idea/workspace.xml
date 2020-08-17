@@ -3,39 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="76f70abc-4787-4abd-ab3a-b9e907ab11e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionAnswerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Question.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/elements/ContinueButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/elements/ContinueButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/listing/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/listing/QuizzesListItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/listing/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/listing/QuizzesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/CircleChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScoreCircleChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Initial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/initial/QuizInitial.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/QuizQuestion.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/QuestionImage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/QuizQuestionImage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Questions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/QuizQuestions.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Quiz.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Quiz.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScoreResult.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/ResultsHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScoreResultsHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Score.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScore.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/answer-types/Answer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/answer-types/QuizQuestionAnswerText.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/answer-types/Options.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/answer-types/QuizQuestionAnswerOptions.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router-setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/vuex-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vuex-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_welcome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_welcome.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/quizzes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quizzes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,6 +227,7 @@
       <workItem from="1597260684077" duration="1677000" />
       <workItem from="1597420324893" duration="1231000" />
       <workItem from="1597492875733" duration="443000" />
+      <workItem from="1597693652602" duration="920000" />
     </task>
     <task id="LOCAL-00001" summary="Quiz listing finished">
       <created>1589583524153</created>

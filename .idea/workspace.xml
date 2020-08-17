@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76f70abc-4787-4abd-ab3a-b9e907ab11e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +228,7 @@
       <workItem from="1597260684077" duration="1677000" />
       <workItem from="1597420324893" duration="1231000" />
       <workItem from="1597492875733" duration="443000" />
-      <workItem from="1597693652602" duration="920000" />
+      <workItem from="1597693652602" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="Quiz listing finished">
       <created>1589583524153</created>

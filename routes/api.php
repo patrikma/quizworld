@@ -25,7 +25,7 @@ Route::get('quiz-info/{quizId}', 'QuizController@show');
  * Returns questions for the quiz with the given ID
  * [{id, text, type, quiz_id, created_at, updated_at}]
  */
-Route::get('all-questions/{quizId}', 'QuestionController@index');
+Route::get('all-questions/{quizId}', 'QuestionAnswerController@index');
 
 /**
  * Returns all options for the question with the given ID (ONLY FOR TYPE 0!)
@@ -42,7 +42,7 @@ Route::get('question-image/{questionId}', 'QuestionImageController@get');
  * Returns a collection of questions belonging to the quiz with the given ID  and correct results for all of them
  * [{question_id, text, type, opt_id, answer}]
  */
-Route::get('correct-results/{quizId}', 'QuizController@correctOptionsAnswers');
+Route::get('correct-results/{quizId}', 'QuestionAnswerController@correctOptionsAnswers');
 
 /**
  * Returns a random quiz

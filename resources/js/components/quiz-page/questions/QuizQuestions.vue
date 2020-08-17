@@ -7,10 +7,10 @@
 </template>
 
 <script>
-    import Question from "./Question";
+    import Question from "./QuizQuestion";
 
     import axios from "axios";
-    import store from "../../vuex-store";
+    import store from "../../../vuex-store";
 
     export default {
         name: "Questions",

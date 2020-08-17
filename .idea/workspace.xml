@@ -3,14 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="76f70abc-4787-4abd-ab3a-b9e907ab11e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionAnswerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Question.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/quiz-board.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Question.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/ResultsHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/ResultsHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Score.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Score.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/elements/ContinueButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/elements/ContinueButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/elements/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/listing/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/listing/QuizzesListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/listing/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/listing/QuizzesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/CircleChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScoreCircleChart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Initial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/initial/QuizInitial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/QuizQuestion.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/QuestionImage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/QuizQuestionImage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Questions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/QuizQuestions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Quiz.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/Quiz.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScoreResult.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/ResultsHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScoreResultsHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/Score.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/score/QuizScore.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/answer-types/Answer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/answer-types/QuizQuestionAnswerText.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/quiz-page/answer-types/Options.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/quiz-page/questions/answer-types/QuizQuestionAnswerOptions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router-setup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vuex-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vuex-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_welcome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_welcome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/quizzes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quizzes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -146,7 +168,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -164,11 +186,11 @@
       <recent name="C:\XAMPP\htdocs\quiz\resources\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\elements" />
+      <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\quiz-page\questions" />
       <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\quiz-page" />
-      <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\listing" />
-      <recent name="C:\XAMPP\htdocs\quiz\resources\views\admin" />
-      <recent name="C:\XAMPP\htdocs\quiz\public\js" />
+      <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\questions" />
+      <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\quiz-page\initial" />
+      <recent name="C:\XAMPP\htdocs\quiz\resources\js\components\quiz-page\score" />
     </key>
   </component>
   <component name="RunManager">
@@ -226,7 +248,18 @@
       <workItem from="1592394148083" duration="258000" />
       <workItem from="1592417379812" duration="1875000" />
       <workItem from="1592473639829" duration="1185000" />
-      <workItem from="1592478715290" duration="8914000" />
+      <workItem from="1592478715290" duration="10182000" />
+      <workItem from="1592569907723" duration="611000" />
+      <workItem from="1592581165308" duration="6875000" />
+      <workItem from="1592651192412" duration="11603000" />
+      <workItem from="1592738608556" duration="10332000" />
+      <workItem from="1593106318938" duration="952000" />
+      <workItem from="1593265021833" duration="647000" />
+      <workItem from="1593975379556" duration="868000" />
+      <workItem from="1597074424026" duration="3336000" />
+      <workItem from="1597260684077" duration="1677000" />
+      <workItem from="1597420324893" duration="1231000" />
+      <workItem from="1597492875733" duration="443000" />
     </task>
     <task id="LOCAL-00001" summary="Quiz listing finished">
       <created>1589583524153</created>
@@ -246,26 +279,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="Quiz listing finished" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="377" y="458" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589632854617">
+    <state x="307" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592684451022">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="377" y="458" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1589632854617" />
+    <state x="307" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592684451022" />
+    <state x="377" y="458" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592684570271">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="377" y="458" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592684570271" />
     <state x="285" y="298" key="CommitChangelistDialog2" timestamp="1589583523329">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="285" y="298" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1589583523329" />
-    <state x="434" y="458" key="FileChooserDialogImpl" timestamp="1592394404168">
+    <state x="434" y="458" key="FileChooserDialogImpl" timestamp="1597493317514">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="434" y="458" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1592394404168" />
+    <state x="434" y="458" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1597493317514" />
     <state x="481" y="631" key="NewPhpFileDialog" timestamp="1589632973953">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="481" y="631" key="NewPhpFileDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1589632973953" />
-    <state x="362" y="527" key="com.intellij.ide.util.TipDialog" timestamp="1592478793141">
+    <state x="362" y="527" key="com.intellij.ide.util.TipDialog" timestamp="1597493310066">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="362" y="527" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592478793141" />
+    <state x="362" y="527" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1597493310066" />
     <state x="458" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589583575356">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

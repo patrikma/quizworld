@@ -10880,25 +10880,26 @@ a.text-dark:focus {
 html,
 body {
   height: 100%;
+  font-size: 14px;
 }
 
-#particles-background {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a5e5ef+0,2ed1ce+100 */
-  background: #a5e5ef;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #a5e5ef 0%, #2ed1ce 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
+@media (min-width: 576px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
 
 .welcome {
   width: 100%;
   height: 100vh;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a5e5ef+0,2ed1ce+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #a5e5ef 0%, #2ed1ce 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;

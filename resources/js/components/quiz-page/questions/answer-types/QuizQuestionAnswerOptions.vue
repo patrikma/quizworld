@@ -7,15 +7,15 @@
             </li>
         </ol>
         <ContinueButton text="Pokračovat" :disabled="!isOptionSelected"
-                        v-on:click.native="saveAndContinue"></ContinueButton>
+                        v-on:click.native="saveAndContinue()"></ContinueButton>
     </div>
 </template>
 
 <script>
-    import ContinueButton from "../../elements/ContinueButton";
+    import ContinueButton from "../../../elements/ContinueButton";
 
     import axios from "axios";
-    import store from "../../../vuex-store";
+    import store from "../../../../vuex-store";
 
     export default {
         name: "Options",
@@ -23,9 +23,7 @@
             /**
              * ID of the question
              */
-            questionId: {
-                type: Number
-            }
+            questionId: Number
         },
         data() {
             return {
@@ -127,9 +125,7 @@
         width: 32px;
         transition: background-color .5s;
     }
-
     .options-list li:not(:last-child) {
         margin-bottom: 15px;
     }
-
 </style>

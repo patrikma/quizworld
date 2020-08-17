@@ -23,7 +23,7 @@ class QuizController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new quiz.
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -50,7 +50,7 @@ class QuizController extends Controller
     }
 
     /**
-     * Get info about the current quiz
+     * Get info about the current quiz - name and total number of questions
      *
      * @param  int  $id
      * @return QuizResource
@@ -64,40 +64,11 @@ class QuizController extends Controller
     }
 
     /**
-     * Array of correct answers and options for the given quiz
-     * @param $quizId - quiz ID
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
-     */
-    public function correctOptionsAnswers($quizId) {
-        $correctOptions = Question::where('quiz_id', '=', $quizId)
-            ->join('options', 'options.question_id', '=', 'questions.id')
-            ->join('correct_options', 'correct_options.option_id', '=', 'options.id')
-            ->select('questions.id AS question_id', 'questions.text AS text', 'type', 'options.id AS opt_id',
-                'options.text AS answer');
-        $correctAnswers = Question::where('quiz_id', '=', $quizId)
-            ->join('answers', 'answers.question_id', '=', 'questions.id')
-            ->select('questions.id AS question_id', 'questions.text AS text', 'type', 'answers.id AS opt_id',
-                'answers.answer AS answer')->union($correctOptions)->get()->sortBy('question_id');
-        return QuizResource::collection($correctAnswers);
-    }
-
-    /**
      * Gets a random quiz
      * @return QuizResource
      */
     public function randomQuiz() {
         $randomQuiz = Quiz::all()->random(1)->first();
         return new QuizResource($randomQuiz);
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

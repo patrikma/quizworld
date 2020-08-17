@@ -3,14 +3,14 @@
         <label for="answer">Vaše odpověď:</label>
         <input type="text" v-model="userAnswer" id="answer">
         <ContinueButton text="Pokračovat" :disabled="!userAnswer"
-                        v-on:click.native="saveAndContinue"></ContinueButton>
+                        v-on:click.native="saveAndContinue()"></ContinueButton>
     </div>
 </template>
 
 <script>
-    import ContinueButton from "../../elements/ContinueButton";
+    import ContinueButton from "../../../elements/ContinueButton";
 
-    import store from "../../../vuex-store";
+    import store from "../../../../vuex-store";
 
     export default {
         name: "Answer",
@@ -18,9 +18,7 @@
             /**
              * ID of the question
              */
-            questionId: {
-                type: Number
-            }
+            questionId: Number
         },
         data() {
             return {
@@ -39,7 +37,7 @@
                 if (!this.userAnswer) {
                     return;
                 }
-                store.commit('saveAnswer', {questionId: this.id, answer: this.userAnswer});
+                store.commit('saveAnswer', {questionId: this.id, answer: this.userAnswer.trim()});
                 if (store.getters.isLastQuestion) {
                     store.commit('finish');
                     return;

@@ -1,5 +1,4 @@
 // Fonts
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 
 // Variables
@@ -8,8 +7,16 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// General font and height settings
 html, body {
     height: 100%;
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
+    html, body {
+        font-size: 16px;
+    }
 }
 
 // Front page

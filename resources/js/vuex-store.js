@@ -3,6 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
+/**
+ * Vuex settings
+ * @type {Store}
+ */
 const store = new Vuex.Store({
      state: {
          quizId: null,

@@ -2,7 +2,7 @@
     <div class="question">
         <span class="counter">Otázka č. {{details.counter}} z celkem {{total}}</span>
         <h1 class="question-text">{{details.text}}</h1>
-        <QuestionImage :questionId="details.id"></QuestionImage>
+        <QuestionImage :questionId="details.id" :key="details.counter"></QuestionImage>
         <!-- Display suitable answer type -->
         <Options v-if="details.type === 0" :questionId="details.id" :key="details.id"></Options>
         <Answer v-if="details.type === 1" :questionId="details.id" :key="details.id"></Answer>
@@ -10,25 +10,27 @@
 </template>
 
 <script>
-    import Options from "./answer-types/Options";
-    import Answer from "./answer-types/Answer";
-    import QuestionImage from "./QuestionImage";
+    import Options from "./answer-types/QuizQuestionAnswerOptions";
+    import Answer from "./answer-types/QuizQuestionAnswerText";
+    import QuestionImage from "./QuizQuestionImage";
 
     export default {
         name: "Question",
         props: {
             /**
-             * Info about the quiz
+             * Info about the quiz and current question
+             * props:
+             * id - id
+             * counter - current question index (starting from 1)
+             * total - total number of questions
+             * text - question text
+             * type - question type (0/1)
              */
-            details: {
-                type: Object
-            },
+            details: Object,
             /**
              * Total number of questions
              */
-            total: {
-                type: Number
-            }
+            total: Number
         },
         components: {
             // Image for this question (if is available)

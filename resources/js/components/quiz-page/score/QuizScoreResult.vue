@@ -18,10 +18,12 @@
         props: {
             /**
              * Result details
+             * props:
+             * question - text of the question
+             * userAnswer - answer from the user
+             * correctAnswer - correct answer
              */
-            result: {
-                type: Object
-            }
+            result: Object
         }
     }
 </script>
@@ -42,10 +44,12 @@
     }
     .question {
         flex-basis: 50%;
+        padding-right: 5px;
     }
     .user-answer {
         flex-basis: 25%;
         font-weight: 700;
+        padding-right: 5px;
     }
     .user-answer.correct {
         color: #2a9055;

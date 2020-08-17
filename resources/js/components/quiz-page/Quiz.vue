@@ -8,11 +8,11 @@
 </template>
 
 <script>
-    import Initial from "./Initial";
-    import Score from "./Score";
+    import Initial from "./initial/QuizInitial";
+    import Score from "./score/QuizScore";
+    import Questions from "./questions/QuizQuestions";
 
     import store from "../../vuex-store";
-    import Questions from "./Questions";
 
     export default {
         name: "Quiz",
@@ -62,6 +62,7 @@
     .quiz-area {
         background-color: white;
         padding: 30px 15px;
+        margin-bottom: 30px;
         box-shadow: 0 0 14px -5px rgba(0,0,0,0.46);
     }
 </style>

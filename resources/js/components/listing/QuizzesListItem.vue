@@ -7,8 +7,6 @@
                 <span class="total">Celkem otázek: {{total}}</span>
             </div>
         </div>
-        <div class="right">
-        </div>
     </router-link>
 </template>
 
@@ -19,21 +17,15 @@
             /**
              * ID of the quiz
              */
-            id : {
-                type: Number
-            },
+            id : Number,
             /**
              * Name of the quiz
              */
-            name: {
-                type: String
-            },
+            name: String,
             /**
              * Total number of questions belonging to the quiz
              */
-            total: {
-                type: Number
-            }
+            total: Number
         }
     }
 </script>
@@ -46,7 +38,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 10px 0;
         margin-bottom: 20px;
         border-bottom: 2px solid #dfdfdf;
@@ -79,11 +71,5 @@
     }
     .info .total {
         font-size: .9rem;
-    }
-    .right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: color .5s;
     }
 </style>

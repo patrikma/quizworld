@@ -6,8 +6,15 @@
     export default {
         name: "ContinueButton",
         props: {
-            text: {},
+            /**
+             * Text in the button
+             */
+            text: String,
+            /**
+             * If button is disabled
+             */
             disabled: {
+                type: Boolean,
                 default: false
             }
         }

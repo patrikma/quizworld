@@ -1,11 +1,13 @@
 <template>
     <div class="quizzes-list">
         <Header title="Všechny kvízy"></Header>
+
         <div class="sort-settings">
             <button class="option selected">
                 Od nejnovějších
             </button>
         </div>
+
         <div v-if="quizzes">
             <div v-for="{id, name, total} in quizzes" class="item-wrapper">
                 <Item :id="id" :name="name" :total="total"></Item>
@@ -16,7 +18,7 @@
 
 <script>
     import Header from "../elements/Header";
-    import Item from "./Item";
+    import Item from "./QuizzesListItem";
 
     import axios from 'axios';
     import store from "../../vuex-store";
@@ -60,6 +62,9 @@
 </script>
 
 <style scoped>
+    *:focus {
+        outline: none;
+    }
     .quizzes-list {
         background-color: white;
         padding: 30px 15px;
@@ -79,8 +84,5 @@
     }
     button.option.selected:hover {
         cursor: default;
-    }
-    *:focus {
-        outline: none;
     }
 </style>

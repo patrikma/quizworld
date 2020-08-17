@@ -20,11 +20,25 @@
 <script>
     export default {
         name: "CircleChart",
-        props: ['percentage'],
+        props: {
+            /**
+             * Success rate (successfully answered questions / all questions)
+             */
+            percentage: Number
+        },
         methods: {
+            /**
+             * Generates data for the svg format to fill the circle
+             * @return {string} - formatted number for stroke-dasharray
+             */
             getChartPerimeter() {
                 return this.percentage + ", 100"
             },
+            /**
+             * Rounds number to one decimal max.
+             * @param number - to be rounded
+             * @return {number} - rounded number
+             */
             round(number) {
                 return Math.round(number * 10) / 10;
             }

@@ -11,9 +11,7 @@
             /**
              * ID of the question it belongs to
              */
-            questionId: {
-                type: Number
-            }
+            questionId: Number
         },
         data() {
             return {
@@ -24,6 +22,10 @@
             this.fetchImagePath();
         },
         methods: {
+            /**
+             * Gets path of the image with the given ID and saves it
+             * Image is optional and does not have to be loaded
+             */
             fetchImagePath() {
                 axios.get('/api/question-image/' + this.questionId)
                     .then( response => {

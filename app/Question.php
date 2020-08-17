@@ -20,4 +20,8 @@ class Question extends Model
     public function answer() {
         return $this->hasOne('App\Answer');
     }
+
+    public function image() {
+        return $this->hasOne('App\QuestionImage');
+    }
 }

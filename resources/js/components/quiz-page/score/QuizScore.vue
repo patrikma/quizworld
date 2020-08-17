@@ -21,13 +21,13 @@
 </template>
 
 <script>
-    import Header from "../elements/Header";
-    import Result from "./Result";
-    import ResultsHeader from "./ResultsHeader";
-    import CircleChart from "./CircleChart";
+    import Header from "../../elements/Header";
+    import Result from "./QuizScoreResult";
+    import ResultsHeader from "./QuizScoreResultsHeader";
+    import CircleChart from "./QuizScoreCircleChart";
 
     import axios from "axios";
-    import store from "../../vuex-store";
+    import store from "../../../vuex-store";
 
     export default {
         name: "Score",
@@ -96,9 +96,6 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-    }
-    .score-head {
-        text-align: left;
     }
     .results-wrapper {
         width: 100%;
